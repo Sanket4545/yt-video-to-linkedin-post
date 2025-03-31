@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube to LinkedIn Post</title>
+</head>
+<body>
+    <h2>Enter YouTube Video URL</h2>
+    <form method="post">
+        <input type="text" name="video_url" placeholder="Enter YouTube Video URL" required>
+        <button type="submit">Generate</button>
+    </form>
+
+    {% if transcription %}
+        <h3>Transcription:</h3>
+        <p>{{ transcription }}</p>
+        <h3>LinkedIn Post:</h3>
+        <p>{{ linkedin_post }}</p>
+    {% endif %}
+</body>
+</html>
